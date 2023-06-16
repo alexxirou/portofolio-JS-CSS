@@ -1,0 +1,98 @@
+<!DOCTYPE html lang="en-US">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    
+    <!--custom css-->
+    <link rel="stylesheet" href="css/header-style.css">
+    <!--on load preloader function-->
+    <script>
+      window.onload = function() {
+            showContent();
+          }; 
+    </script>  
+  </head>
+  <body class="bg-black">
+    <div class="preloader bg-black full-screen visible">
+      <h1 class="loading-title visible">
+        <span class="let1">l</span>  
+        <span class="let2">o</span>  
+        <span class="let3">a</span>  
+        <span class="let4">d</span>  
+        <span class="let5">i</span>  
+        <span class="let6">n</span>  
+        <span class="let7">g</span>  
+      </h1>
+    </div>
+    <div class="content hidden">
+      <div class="fixed-bar flex-center">
+        <div class="collapse">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>  
+          <ul class="menu bg-transparent font-roboto-16-white">
+            <li class="main-button font-roboto-16-white bg-transparent"><a href="#">ABOUT</a></li>
+            <li class="main-button font-roboto-16-white bg-transparent"><a href="#">PROJECTS</a></li>
+          </ul>
+        </div>
+        <div class="content-wrapper flex-center">
+          <p class="font-roboto-16-white">Alexandros Xirouchakis</p>
+        </div>
+        <div class="header-buttons-container">
+          <button class="main-button font-roboto-16-white bg-transparent" id="contact">Contact</button>
+        </div>
+   
+      </div>
+      <div class="front-page bg-transparent">
+        <img class="backdrop-image mask-section fixed-top" src="images/pictures/future-grid.webp" alias="future-grid"/>
+        <div class="main-banner full-screen flex-center fixed-top">
+            <h1 class="header-title">Full-stack<br>programming</h1>
+            <a class="button-link" href="/#PROJECTS">Check me out</a>
+        </div>
+      </div>
+    
+      <div class="main-page bg-black">
+        <div class="source-code">
+          <div id="canvas-container">
+            <canvas class="flex-center" id="canvas"></canvas>
+          </div>
+          <div class="main-banner half-section bg-transparent flex-center" style="padding:  20% 0;">
+            <h1 class="front font-roboto-16-white" >SOURCE CODE</h1>
+            <p class="front font-roboto-16-white" style="text-align: center; font-size:calc(12px + 0.5vw);">Embark on an extraordinary journey into the heart of this portfolio's creation,<br> where every line of code was meticulously crafted with passion and dedication. <br> Unveil the inner workings, explore the intricacies, and uncover the essence of its beauty. <br> Click below to delve into the source code and unravel the story behind this digital masterpiece. <br> Click to view the source code:</p>
+            <a class="front button-link" href="https://github.com/alexxirou">Show me</a>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footer-row">
+            <a href="https://github.com/alexxirou"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alexxirou"><i class="fa fa-linkedin"></i></a>
+            <a href="https://facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://discord.com/users/97752634122829824"><i class="fa fa-discord" aria-hidden="true"></i></a>
+          </div>
+          <div class="footer-row">
+            <ul>  
+              <li><a href="/#about" class="footer-link">About</a></li>
+              <li><a href="/#sourcecode" class="footer-link">Source code</a></li>
+              <li><a href="/#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <p>Based on LOKKEE STUDIOS portfolio model:<a href="https://www.lokkeestudios.com"> https://www.lokkeestudios.com/</a></p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script src="js/header.js" defer></script>
+    <script src="js/canvas.js" defer></script>
+  </body>
+</html>
