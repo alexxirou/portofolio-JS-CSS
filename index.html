@@ -66,6 +66,20 @@
           <div id="animation-container"></div>
           <div class="right-section">
             <div class="text-container">
+              <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>
+              </div>
+              <svg id="filters" style="display:none;">
+                <defs>
+                    <filter id="threshold">
+                        <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                              0 1 0 0 0
+                              0 0 1 0 0
+                              0 0 0 255 -140" />
+                    </filter>
+                </defs>
+              </svg>  
               <h1 class="font-roboto-16-white">Hello there!</h1>
               <p class="font-roboto-16-white" >I'm Alex, an enthusiastic creator on the internet. In 2022, I completed my studies in BTS Networks and Systems, which provided me with a solid understanding of networking and systems. Subsequently, I pursued a year of education at the University of Strasbourg Department of Mathematics and Computer Science,  where I gained valuable knowledge in low-level programming. <br> As for my programming language skills, here's a list of languages I have worked with:</p>
             
@@ -85,12 +99,7 @@
             
               
             </div> 
-            <div class="scrolling-text">
-              <h1 class="font-roboto-16-white">Programmer</h1>
-              <h1 class="font-roboto-16-white">Front-end</h1>
-              <h1 class="font-roboto-16-white">Back-end</h1>
-              <h1 class="font-roboto-16-white">Server config</h1>
-            </div>
+           
           </div>
         </div>
         <div class="bg-black full-screen flex-center" id="projects" style="flex-direction:column;">
