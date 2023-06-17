@@ -181,14 +181,12 @@ body {
   position: absolute;
   margin: auto;
   text-align: center;
-  opacity: 0;
   padding-bottom: 1px;
+  z-index:9999;
+  opacity: 1;
 }
 
-.preloader.visible {
-  opacity: 1;
-  
-}
+
 
 .preloader h1 {
   top: 50%;
@@ -196,6 +194,7 @@ body {
   font-weight: 100;
   font-size: calc(12px + 2.5vw);
   color: #a3e1f0;
+  z-index:9999;
 }
 
 .preloader span {
@@ -246,11 +245,11 @@ body {
 
 @keyframes slideInFromBottom {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(100);
     opacity: 1;
   }
 }
@@ -278,18 +277,26 @@ body {
   }
 }
 
-.content{
-  visibility: visible;
+.preloader.slide-up {
+  animation: slideUp 3s ease-in-out forwards;
 }
 
-.content.animate {
-  animation: slideInFromBottom 3s ease-in-out;
+@keyframes slideUp {
+  0% {
+   
+    transform: translateY(0);
+  }
+  100% {
+   
+    transform: translateY(-100%);
+  }
 }
 
 .content.hidden {
   opacity: 0;
   visibility: hidden;
 }
+
 
 .menu {
   display: flex;
@@ -454,8 +461,21 @@ body {
 }
 
 
+.coding-svg {
+  margin: 0 10px;
+  height:40px;
+}
 
-.coding-svg{
+
+#about{
+  overflow: hidden;
+  width: 100%;
+}
+
+
+
+.coding-svg {
+  
   height:40px;
 }
 
@@ -534,10 +554,13 @@ body {
     margin:0% 3%;
   }
 
-  .right-section{
-    
-      text-align:center;
-  
-  }  
+#about{
+  flex-wrap: wrap;
+}
+
+.text-container{
+  text-align: center;
+}
+   
 }
   
