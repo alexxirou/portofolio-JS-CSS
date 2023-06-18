@@ -49,7 +49,7 @@ body {
   z-index: 999;
   justify-content: space-evenly;
   gap: 20%;
-  backdrop-filter: blur(1.17);
+  backdrop-filter: blur(10px);
   
 }
 
