@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+
     <!--custom css-->
     <link rel="stylesheet" href="css/header-style.css">
     <!--on load preloader function-->
@@ -53,7 +56,7 @@
         </div>
    
       </div>
-      <div class="front-page bg-transparent">
+      <div class="front-page full-screen bg-transparent">
         <img class="backdrop-image mask-section fixed-top" src="images/pictures/future-grid.webp" alias="future-grid"/>
         <div class="main-banner full-screen flex-center fixed-top">
             <h1 class="header-title">Full-stack<br>programming</h1>
@@ -62,13 +65,31 @@
       </div>
     
       <div class="main-page  bg-black">
-        <div class="flex-center" id="about" style="height:50%;">
-          <div id="animation-container"></div>
-          <div class="right-section">
+        <div class="flex-center" id="about">
+          <div class="right-section full-screen flex-center" >
+          <img style="max-width:100%; max-height:100%;" src="images/pictures/funny.jpg">
+          </div>
+          <div class="right-section flex-center">
+            
             <div class="text-container">
+              <h1 class="font-roboto-16-white" style="color:#008b8b;">ABOUT</h1>
+              <div class="title flex-center;">
               <div id="container">
                 <span id="text1"></span>
                 <span id="text2"></span>
+              </div>
+              <div class="coding-languages">
+                <i class="devicon-c-plain" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-tailwindcss-plain" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-javascript-plain colored" style="font-size: 50px; color:white;"></i>>
+                <i class="devicon-mysql-plain colored" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-ruby-plain-wordmark colored" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-php-plain colored" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-vuejs-plain-wordmark colored" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-django-plain colored" style="font-size: 50px; color:white;"></i>
+                <i class="devicon-magento-original colored" style="font-size: 50px; color:white;"></i>
+
+              </div>
               </div>
               <svg id="filters" style="display:none;">
                 <defs>
@@ -79,41 +100,28 @@
                               0 0 0 255 -140" />
                     </filter>
                 </defs>
-              </svg>  
-              <h1 class="font-roboto-16-white">Hello there!</h1>
-              <p class="font-roboto-16-white" >I'm Alex, an enthusiastic creator on the internet. In 2022, I completed my studies in BTS Networks and Systems, which provided me with a solid understanding of networking and systems. Subsequently, I pursued a year of education at the University of Strasbourg Department of Mathematics and Computer Science,  where I gained valuable knowledge in low-level programming. <br> As for my programming language skills, here's a list of languages I have worked with:</p>
-            
-             
-                <div class="coding-languages">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg">
-                  <img class="coding-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg">
-                </div>
-            
+              </svg> 
               
-            </div> 
-           
+                <p class="font-roboto-16-white" >I'm Alex, an enthusiastic creator on the internet. In 2022, I completed my studies in BTS Networks and Systems, <br> which provided me with a solid understanding of networking and systems. Subsequently, I pursued a year of education at the University of Strasbourg Department of Mathematics and Computer Science,  where I gained valuable knowledge in low-level programming.</p>
+                <form method="get" action="file.doc">
+                <button class="main-button font-roboto-16-white bg-transparent" id="contact">Download CV</button>
+              </form>   
+               
+              </div>
           </div>
         </div>
         <div class="bg-black full-screen flex-center" id="projects" style="flex-direction:column;">
-          <h1 class="font-roboto-16-white" style="font-size: 24px;">Projects</h1>
+          <h1 class="font-roboto-16-white" style="font-size: 24px; color:#008b8b;">Projects</h1>
           <p class="font-roboto-16-white">Under construction</p>
         </div>
-        <div class="source-code">
+        <div class="source-code full-screen flex-center">
           <div id="canvas-container">
-            <canvas class="flex-center" id="canvas"></canvas>
+            <canvas  id="canvas"></canvas>
           </div>
-          <div class="main-banner half-section bg-transparent flex-center" id="sourcecode" style="padding:  20% 0;">
-            <h1 class="front font-roboto-16-white" >SOURCE CODE</h1>
+          <div class="half-section main-baner bg-transparent flex-center" id="sourcecode">
+            <h1 class="front font-roboto-16-white" style="color:#008b8b;" >SOURCE CODE</h1>
             <p class="front font-roboto-16-white" style="text-align: center; font-size:calc(12px + 0.5vw);">Embark on an extraordinary journey into the heart of this portfolio's creation,<br> where every line of code was meticulously crafted with passion and dedication. <br> Unveil the inner workings, explore the intricacies, and uncover the essence of its beauty. <br> Click below to delve into the source code and unravel the story behind this digital masterpiece. <br> Click to view the source code:</p>
-            <a class="front button-link" href="https://github.com/alexxirou/portofolio-JS-CSS">Show me</a>
+            <a class="front button-link" style="background-color:#8b0000; border-color: #8b0000;" href="https://github.com/alexxirou/portofolio-JS-CSS">Show me</a>
           </div>
         </div>
         <div class="footer">
@@ -136,8 +144,7 @@
         </div>
       </div>
     </div> 
-    <script src="js/header.js" defer></script>
-    <script src="js/matrix-canvas.js" defer></script>
-   
+    <script src="js/header.js" type="text/javascript"></script>
+    <script src="js/matrix-canvas.js" type="text/javascript"></script>
   </body>
 </html>

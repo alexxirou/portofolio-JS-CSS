@@ -1,3 +1,42 @@
+const root = document.querySelector(".front-page");
+const bg = document.querySelector(".backdrop-image");
+
+const positions = [];
+
+const handleMove = (e) => {
+  let x, y;
+
+  if (e.touches) {
+    // Touch events
+    x = -(e.touches[0].pageX + bg.offsetLeft) / 100; // Increase divisor value for more pronounced horizontal movement
+    y = 0; // Set y value to 0 for horizontal parallax on mobile
+  } else {
+    // Mouse events
+    x = -(e.pageX + bg.offsetLeft) / 200;
+    y = -(e.pageY + bg.offsetTop) / 500;
+  }
+
+  positions.push({ x, y });
+  const averageCount = 10;
+  if (positions.length > averageCount) positions.splice(0, 1);
+
+  const current = positions.reduce(
+    (acc, e) => {
+      acc.x += e.x;
+      acc.y += e.y;
+      return acc;
+    },
+    { x: 0, y: 0 }
+  );
+  current.x /= positions.length;
+  bg.style.transform = `translate(${current.x}px, ${current.y}px)`;
+};
+
+root.addEventListener("mousemove", handleMove);
+root.addEventListener("touchmove", handleMove);
+
+
+
 function showContent() {
   const preloader = document.querySelector('.preloader');
   const content = document.querySelector('.content');
@@ -21,13 +60,13 @@ function showContent() {
 
   // Add an animation class to slide up the preloader
   setTimeout(function () {
-    preloader.classList.add('slide-up');
+    preloader.classList.add('slide-down');
   }, 2500); // Keep the delay at 100 milliseconds for the animation
 
   setTimeout(function () {
-    // Make the main-page visible
+    //Make the main-page visible
     mainPage.style.display = 'block';
-  }, 5500);
+  }, 4500);
 
   let opacity = 1;
   const fadeOutInterval = setInterval(function () {
@@ -37,13 +76,14 @@ function showContent() {
       clearInterval(fadeOutInterval);
       h1Element.style.display = 'none';
     }
-  }, 180); // Adjust the interval time (in milliseconds) for the gradual fade-out effect
+  }, 150); // Adjust the interval time (in milliseconds) for the gradual fade-out effect
 
   // Hide the preloader after a certain duration
   setTimeout(function () {
     preloader.style.display = 'none';
   }, 5500); // Adjust the delay to your desired time (in milliseconds)
 }
+
 function animateTextMorph() {
   const elts = {
     text1: document.getElementById("text1"),
