@@ -20,7 +20,6 @@ window.addEventListener("load", () => {
   const glitchAmount = 0.01;
 
   const moveScale = 0.012;
-
   const speedBase = 1.0;
   const speedDeviation = 0.4;
   const streaks = 1.9;
