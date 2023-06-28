@@ -1,3 +1,5 @@
+
+
 const root = document.querySelector(".front-page");
 const bg = document.querySelector(".backdrop-image");
 
@@ -169,9 +171,57 @@ function animateTextMorph() {
 animateTextMorph();
 
 
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.elements.name.value = '';
-  e.target.elements.email.value = '';
-  e.target.elements.message.value = '';
-});
+
+window.onload = function() {showContent();};
+
+
+
+function sendEmail(contactForm) {
+  const name = contactForm.name.value;
+  const email = contactForm.email.value;
+  const message = contactForm.message.value;
+
+  // Make an AJAX request to Roundcube's API to send the email
+  const xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        console.log('Email sent successfully!');
+      } else {
+        console.error('Error sending email:', xhr.responseText);
+      }
+    }
+  };
+
+  xhr.open('POST', '/var/www/roundcube', true);  // Replace with the actual path to the Roundcube API endpoint
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  // Set the credentials
+  const username = 'your_username';  // Replace with your Roundcube API username
+  const password = 'your_password';  // Replace with your Roundcube API password
+  const credentials = `${username}:${password}`;
+  const encodedCredentials = btoa(credentials);
+
+  xhr.setRequestHeader('Authorization', `Basic ${encodedCredentials}`);
+
+  // Prepare the email data
+  const formData = new FormData();
+  formData.append('to', 'recipient@example.com');  // Replace with the recipient email address
+  formData.append('from', email);
+  formData.append('subject', 'New Contact Form Submission');
+  formData.append('message', `Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+  // Send the email data
+  xhr.send(formData);
+
+  // You can perform additional actions like displaying a success message or resetting the form after sending the email.
+  // ...
+}
+
+const contactForm = document.getElementById('contactForm');
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    sendEmail(contactForm);
+  });
