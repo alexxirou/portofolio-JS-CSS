@@ -41,8 +41,8 @@ Navigate through the different sections of the portfolio to learn more about me,
 You can customize the portfolio to match your personal information and projects:
 
 - Open the `index.html` file and update the content within the HTML structure to reflect your own information.
-- Modify the styles in the CSS file (`styles.css`) to customize the appearance of the portfolio.
-- Replace the images in the `img` directory with your own images.
+- Modify the styles in the CSS file (`header-style.css`) to customize the appearance of the portfolio.
+- Replace the images in the `images` directory with your own images.
 
 ## Technologies Used
 
