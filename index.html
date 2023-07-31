@@ -23,6 +23,9 @@
             showContent();
           }; 
     </script>  
+     <script  defer src="js/header.js" type="text/javascript"></script>
+     <script defer src="js/matrix-canvas.js" type="text/javascript"></script>
+     <script defer src="js/slider.js"  type="text/javascript"></script>
   </head>
   <body class="bg-black">
     <div class="preloader bg-black full-screen visible">
@@ -112,7 +115,31 @@
         </section>
         <section class="bg-black full-screen flex-center" id="projects" style="flex-direction:column;">
           <h1 class="font-roboto-16-white" style="font-size: 24px; color:#008b8b;">Projects</h1>
-          <p class="font-roboto-16-white">Under construction</p>
+          <div class="slider">
+            <div class="slide slide--1">
+              <div class="projects--container">
+                <h5 class="project__header">Recipe Finder Web Application</h5>
+                <img src="images/pictures/forkify.png" alt="" class="project__photo" />
+                <p class="project__text">
+                  The Recipe Finder Web Application is a fully functional and responsive web application 
+                  that allows users to discover and explore a wide variety of recipes. 
+                  It provides users with an intuitive and interactive interface to search for recipes, 
+                  view detailed recipe information, adjust serving sizes, 
+                  and bookmark their favorite recipes for quick access.
+                </p>
+                <address class="project__tecnologies">
+                 
+                  <p style="padding-bottom: 5%;"> Technologies: JavaScript (ES6+), Parcel Bundler, Forkify API ,Fraction.js</p>
+                  <a class ="front button-link" style="background-color:#8b0000; border-color: #8b0000;" href="https://64c6d38542477c3b236721a0--gregarious-fox-dab8e8.netlify.app/">Demo</a>
+                </address>
+              </div>
+            </div>
+            <button class="slider__btn slider__btn--left">&larr;</button>
+            <button class="slider__btn slider__btn--right">&rarr;</button>
+            <div class="dots"></div>
+          </div>
+    
+            
         </section>
         <section class="bg-black full-screen flex-center" id="contact">
   
@@ -182,7 +209,6 @@
         </div>
       </section>
     </div> 
-    <script src="js/header.js" type="text/javascript"></script>
-    <script src="js/matrix-canvas.js" type="text/javascript"></script>
+   
   </body>
 </html>

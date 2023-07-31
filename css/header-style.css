@@ -564,6 +564,155 @@ textarea {
   user-select: none;
 }
 
+/* SLIDER */
+.slider {
+  max-width: 100rem;
+  height:max-content;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+  top: 0;
+  width: 100%;
+ 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: white;
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: calc(15px + 1.5vw);
+  width: calc(15px + 1.5vw);
+  font-size: calc(10px + 1vw);
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 11%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: relative;
+  margin: 6% auto; /* Center the div horizontally */
+  transform: translateX(-50%);
+  display: flex;
+}
+
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: calc(2px + 0.5vw);
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: white;
+  opacity: 1;
+}
+
+
+
+/* projects */
+
+.projects--container {
+  width: 65%;
+  height: 100%;
+  position: relative;
+}
+
+.projects--container::before {
+  content: '\201C';
+  position: absolute;
+  top: -5.7rem;
+  left: -6.8rem;
+  line-height: 1;
+  font-size: calc(12px + 1vw);
+  font-family: inherit;
+  color: var(--color-primary);
+  z-index: -1;
+}
+
+.project__header {
+  font-size: calc(12px + 1vw);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color:white;
+  text-align: center;
+}
+
+.project__text {
+  text-align: center;
+  font-size: calc(12px + 0.5vw);
+  margin-bottom: 3.5rem;
+  color: white;
+  width: 100%;
+}
+
+
+.project__photo {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.project__tecnologies {
+  font-size: calc(12px + 0.2vw);
+  font-weight: 500;
+  align-self: end;
+  margin: 0;
+  text-align: center;
+  color: white;
+ 
+}
+
+
 
 
 
@@ -654,5 +803,8 @@ textarea {
     min-width: 350px;
   }
    
+  .project__tecnologies{
+    padding-bottom: 5%;
+  }
 }
   
