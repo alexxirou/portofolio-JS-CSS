@@ -37,7 +37,11 @@ const handleMove = (e) => {
 root.addEventListener("mousemove", handleMove);
 root.addEventListener("touchmove", handleMove);
 
-
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
 
 function showContent() {
   const preloader = document.querySelector(".preloader");
