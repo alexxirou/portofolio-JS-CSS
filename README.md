@@ -2,6 +2,8 @@
 
 This is a portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, projects, and experience to potential employers and clients.
 
+For the vuejs version visit: https://github.com/alexxirou/portofolio-vuejs
+
 ## Table of Contents
 
 - [Features](#features)
